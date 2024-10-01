@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-# # Lesson 1: Using files in Python
+# # Using files in Python
 
 from helper_functions import get_llm_response
 from IPython.display import display, Markdown
