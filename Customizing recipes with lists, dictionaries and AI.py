@@ -5,8 +5,6 @@
 
 # In the previous lesson, you went through how to use dictionaries to complete tasks by priority. In this lesson, you will see how you can use dictionaries to update LLM prompts and create food recipies that match your friends preferences, restrictions and cooking experience. 
 
-# In[ ]:
-
 
 from helper_functions import print_llm_response, get_llm_response
 
@@ -14,8 +12,6 @@ from helper_functions import print_llm_response, get_llm_response
 # ## Food preference dictionaries
 # 
 # Dictionaries are a useful way to organize multiple variables associated with a single entity, like one of your friends. In the next dictionary, you store the food preferences and cooking experience for Tommy.
-
-# In[ ]:
 
 
 food_preferences_tommy = {
@@ -27,18 +23,10 @@ food_preferences_tommy = {
 
 
 # As you can see there, that dictionary has four keys, wich you can access using `".keys()"`:
-
-# In[ ]:
-
-
 print(food_preferences_tommy.keys())
 
 
 # And it has values with different data types: lists, strings and integers. 
-
-# In[ ]:
-
-
 print(food_preferences_tommy.values())
 
 
@@ -47,10 +35,6 @@ print(food_preferences_tommy.values())
 # ## Using keys and values within AI prompt
 
 # So here's a prompt that uses all the information in the dictionary to create a customized recipe
-
-# In[ ]:
-
-
 prompt = f"""Please suggest a recipe that tries to include 
 the following ingredients: 
 {food_preferences_tommy["favorite_ingredients"]}.
@@ -65,18 +49,10 @@ Provide a two sentence description.
 
 
 # Run the cell below to print the prompt.
-
-# In[ ]:
-
-
 print(prompt)
 
 
 # Now, you can use that prompt with an LLM to suggest a recipe to fit Tommy's preferences:
-
-# In[ ]:
-
-
 print_llm_response(prompt)
 
 
@@ -85,18 +61,10 @@ print_llm_response(prompt)
 # ## Refining the prompt with available ingredients
 
 # You can go a step further and consider the available ingredients at your house. To do so, let's use the following lists:
-
-# In[ ]:
-
-
 available_spices = ["cumin", "turmeric", "oregano", "paprika"]
 
 
 # You can add these directly to the prompt so that the LLM take those into consideration
-
-# In[ ]:
-
-
 prompt = f"""Please suggest a recipe that tries to include 
 the following ingredients: 
 {food_preferences_tommy["favorite_ingredients"]}.
@@ -115,18 +83,10 @@ print(prompt)
 
 
 # Now, get the LLM response to that prompt and assign it to a variable:
-
-# In[ ]:
-
-
 recipe = get_llm_response(prompt)
 
 
 # And print the recipe that considers Tommy's restrictions as well as the available ingredients at your house.
-
-# In[ ]:
-
-
 print(recipe)
 
 
@@ -135,24 +95,11 @@ print(recipe)
 # ## Looking ahead
 
 # Let's take another look at`food_preferences_tommy["dietary_restrictions"]` 
-
-# In[ ]:
-
-
 print(food_preferences_tommy["dietary_restrictions"])
 
 
 # Here is a different way you could tell Python that Tommy is vegetarian:
-
-# In[ ]:
-
-
 food_preferences_tommy["is_vegetarian"] = True
-
-
-# In[ ]:
-
-
 print(food_preferences_tommy)
 
 
@@ -161,10 +108,6 @@ print(food_preferences_tommy)
 # ## Extra practice
 
 # Please go through the exercises in the cells below if you want some extra practice for the topics you covered in this lesson.
-
-# In[ ]:
-
-
 # Update the following dictionary 
 # with your own preferences 
 
@@ -178,10 +121,6 @@ my_food_preferences = {
 ### --------------- ###
 
 print(my_food_preferences)
-
-
-# In[ ]:
-
 
 # Modify the following prompt, 
 # without adding more than two sentences,
