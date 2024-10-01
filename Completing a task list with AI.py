@@ -17,18 +17,10 @@ from helper_functions import print_llm_response, get_llm_response
 # In the last course, you learned about variables. Each variable holds a single piece of data.
 # 
 # For example:
-
-# In[ ]:
-
-
 name = "Tommy"
 
 
 # Let's say I want to write a poem for all my friends... all three of them. Run the cell below, then change the name above to Isabel and rerun the cell.
-
-# In[ ]:
-
-
 prompt = f"""
 Write a four line birthday poem for my friend {name}. 
 The poem should be inspired by the first letter of my friend's name.
@@ -43,41 +35,21 @@ print_llm_response(prompt)
 # ## Creating  a list
 # 
 # Below, you will create a list that holds the names `"Tommy"`, `"Isabel"` and `"Daniel"`.
-
-# In[ ]:
-
-
 friends_list = ["Tommy", "Isabel", "Daniel"]
-
-
-# In[ ]:
-
-
 print(friends_list)
 
 
 # `friends_list` is a single variable of type `list` that holds multiple values.
-
-# In[ ]:
-
-
 type(friends_list)
 
 
 # You can check how many values are stored in the list by using `len()`:
-
-# In[ ]:
-
-
 len(friends_list)
 
 
 # So this list has three elements.
 
 # You can use lists as you used variables before within LLM prompts. Below, you are including the `friends_list` in the prompt to write four-line birthday poems for `'Tommy'`, `'Isabel'` and `'Daniel'`.
-
-# In[ ]:
-
 
 prompt = f"""
 Write a set of four line birthday poems for my friends {friends_list}. 
@@ -87,10 +59,6 @@ print(prompt)
 
 
 # Now, you can use that prompt with the LLM:
-
-# In[ ]:
-
-
 print_llm_response(prompt)
 
 
@@ -98,73 +66,36 @@ print_llm_response(prompt)
 
 # You can access individual elements from a list. Let's ask the chatbot how to do that.
 
-# <p style="background-color:#F5C780; padding:15px"> 🤖 <b>Use the Chatbot</b>: How do I access a specific element of this list:
-# friends_list = ["Tommy", "Isabel", "Daniel"]
-# </p>
-
 # For instance, to access the first element, you would use the following code:
-
-# In[ ]:
-
-
 first_friend = friends_list[0]
 print(first_friend)  # Output: Tommy
 
 
 # To access the second element, you would use the following code:
-
-# In[ ]:
-
-
 print(friends_list[1]) # Output: Isabel
 
 
 # Note that for accessing the first element you used the index 0, and for accessing the second element you used 1.
 
 # So, if you do the following, you'll get an error.
-
-# In[ ]:
-
-
 print(friends_list[3]) # Gives an error
 
 
 # But, if you run the following code, you will be able to access the last element from that list. 
-
-# In[ ]:
-
-
 print(friends_list[2])
 
 
 # ## Adding another element to the list
-
-# In[ ]:
-
-
 print(friends_list)
 
 
 # If you want to add some data to an list, you will use `list.append(new_data)`. So, to add `"Otto"` to your `friends_list`, you can run the following code:
-
-# In[ ]:
-
-
 # add single element to list
 friends_list.append("Otto")
-
-
-# In[ ]:
-
-
 print(friends_list)
 
 
 # Try for yourself - modify code to add another friend, or yourself
-
-# In[ ]:
-
-
 # Modify the code below to add another friend:
 friends_list.append()
 
@@ -172,41 +103,19 @@ friends_list.append()
 # ## Deleting elements
 
 # Tommy moved to Bora Bora, so we can't be friends anymore. Let's remove Tommy from `friends_list` by using `.remove()`:
-
-# In[ ]:
-
-
 #using remove
 friends_list.remove("Tommy")
-
-
-# In[ ]:
-
-
 print(friends_list)
 
 
 # ## Lists with other data types
 # 
 # Lists can hold any type of data. For instance, here is a list of numbers
-
-# In[ ]:
-
-
 list_ages = [42, 28, 30]
-
-
-# In[ ]:
-
-
 print(list_ages)
 
 
 # Lists can also hold long strings. Here's a list of tasks that might make up a todo list
-
-# In[ ]:
-
-
 #list of tasks in priority order. Multi-line lists are allowed in python!
 list_of_tasks = [
     "Compose a brief email to my boss explaining that I will be late for tomorrow's meeting.",
@@ -218,23 +127,11 @@ list_of_tasks = [
 # If you were wondering how to use lists with AI, take this example. Each element in the previous list is a string that you can pass to `print_llm_response()`. If you want an LLM to do each of these tasks for you, here's what you would do:
 # 
 # Set a variable called `task` to each element in the list in turn, then pass it to `print_llm_response()`.
-
-# In[ ]:
-
-
 task = list_of_tasks[0]
 print_llm_response(task)
 
-
-# In[ ]:
-
-
 task = list_of_tasks[1]
 print_llm_response(task)
-
-
-# In[ ]:
-
 
 task = list_of_tasks[2]
 print_llm_response(task)
@@ -246,20 +143,12 @@ print_llm_response(task)
 # ## Extra practice
 
 # Please go through the exercises in the cells below if you want some extra practice for the topics you covered in this lesson.
-
-# In[ ]:
-
-
 # Create a list with the titles 
 # of five of your favorite movies
 
 ### WRITE CODE HERE ###
 movie_list = 
 ### --------------- ###
-
-
-# In[ ]:
-
 
 # Display the fourth element of 
 # the following list using print()
@@ -269,11 +158,6 @@ prime_numbers = [2, 3, 5, 7, 11]
 ### WRITE CODE HERE ###
 
 ### --------------- ###
-
-
-# In[ ]:
-
-
 # Fix the bug in the following code
 
 prime_numbers = [2, 3, 5, 7, 11]
@@ -282,24 +166,9 @@ prime_numbers = [2, 3, 5, 7, 11]
 print(prime_numbers(3)) #access and print() the fourth element
 ### --------------- ###
 
-
-# In[ ]:
-
-
 # Add one name to friends_list using append
-
 friends_list = ["Tommy", "Isabel", "Daniel", "Otto"]
-
-### WRITE CODE HERE ###
-
-### --------------- ###
-
 print(friends_list)
-
-
-# In[ ]:
-
-
 # In the following code, remove the country 
 # that is not in South America
 
@@ -308,8 +177,6 @@ countries_in_south_america = ["Colombia", "Peru",
                               "Argentina"]
 
 ### WRITE CODE HERE ###
-
 ### --------------- ###
-
 print(countries_in_south_america)
 
